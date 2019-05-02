@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/jayakrishnasahit/Documents/GitHub/ds-project/svd.py", line 62, in <module>
+    sc = SparkContext(conf=conf)
+  File "/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 136, in __init__
+  File "/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 198, in _do_init
+  File "/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 306, in _initialize_context
+  File "/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1523, in __call__
+  File "/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 985, in send_command
+  File "/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1152, in send_command
+  File "/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
