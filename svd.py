@@ -35,12 +35,13 @@ def find_eigen(mat):
 		for i in range(20):
 			#print (i)
 			vector = mat.multiply(vector)
+		
 		numpy_arr = np.copy(vector.toLocalMatrix().toArray())
 		#eigen_value = np.min(np.abs(numpy_arr))
 		val =  np.linalg.norm(numpy_arr)
 		numpy_arr = numpy_arr/val
 		#print (np.min(np.abs(numpy_arr)))
-		# print (numpy_arr/np.min(np.abs(numpy_arr)))
+		print (numpy_arr/np.min(np.abs(numpy_arr)))
 		eigen_vectors.append(numpy_arr/np.min(np.abs(numpy_arr)))
 		blocks = sc.parallelize([((0, 0), Matrices.dense(m//2, 1, numpy_arr[:m//2].flatten())),
 					 ((1, 0), Matrices.dense(m//2, 1, numpy_arr[m//2:].flatten()))])
@@ -163,7 +164,7 @@ vector = BlockMatrix(blocks,m//2,1)
 #print (bks(vector),bks(mat))
 #print (res.toLocalMatrix())
 #print (vector.toLocalMatrix())
-
+# start = time.
 u = find_eigen(mat.multiply(mat.transpose()))
 print ('\n\n\n')
 v = find_eigen((mat.transpose()).multiply(mat))
